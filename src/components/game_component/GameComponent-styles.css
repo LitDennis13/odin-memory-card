@@ -19,7 +19,9 @@
     transform: scale(1);
 }
 
-#card-image:hover {
-    transition: .5s transform;
-    transform: scale(1.05);
+@media (min-width: 600px) {
+    #card-image:hover {
+        transition: .5s transform;
+        transform: scale(1.05);
+    }
 }
