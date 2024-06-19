@@ -24,6 +24,7 @@
 }
 
 #score-numbers {
+    font-size: 2vw;
     margin-top: 1.5vh;
     display: flex;
     flex-flow: row nowrap;
