@@ -1,0 +1,25 @@
+
+#card-display {
+    margin-top: 2vh;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(5, 1fr);
+    row-gap: .5vh;
+    column-gap: .5vh;
+}
+
+#card-button {
+    border: none;
+    
+}
+
+#card-image {
+    height: 100%;
+    width: 100%;
+    transition: transform;
+    transform: scale(1);
+}
+
+#card-image:hover {
+    transition: .5s transform;
+    transform: scale(1.05);
+}
