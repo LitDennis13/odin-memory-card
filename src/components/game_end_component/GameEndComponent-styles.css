@@ -1,0 +1,30 @@
+#game-end-display {
+    margin-top: 2vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#display-message {
+    font-size: 6vw;
+}
+
+#restart-button {
+    margin-top: 1vh;
+    font-size: 5vw;
+    width: 35%;
+    height: auto;
+    border: none;
+    border-radius: 5rem;
+    color: white;
+    background-color: rgb(225,5,0);
+    transition: .5s transform;
+    transform: scale(1);
+}
+
+@media (min-width: 600px) {
+    #restart-button:hover {
+        transition: .5s transform;
+        transform: scale(1.1);
+    }
+}

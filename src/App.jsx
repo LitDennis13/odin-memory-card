@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import './App.css'
-import GameComponent from './components/game_component/GameComponent';
 
+import GameComponent from './components/game_component/GameComponent';
+import GameEndComponent from './components/game_end_component/GameEndComponent';
 
 function App() {
   let [currentScoreState, setCurrentScore] = useState(0);
   let [topScoreState, setTopScore] = useState(0);
-
-
+  let [canPlay, setCanPlay] = useState(true);
+  let [userWin, setUserWin] = useState(false);
 
   return (
     <div id="root-container">
@@ -22,10 +23,20 @@ function App() {
         <h2 id="top-score">Top Score: {topScoreState}</h2>
       </div>
       <GameComponent
+        play={canPlay}
+        setPlay={setCanPlay}
+        setWin={setUserWin}
         currentScore={currentScoreState}
         updateCurrentScore={setCurrentScore}
         topScore = {topScoreState}
         updateTopScore={setTopScore}
+      />
+      <GameEndComponent
+      play={canPlay}
+      setPlay={setCanPlay}
+      win={userWin}
+      setWin={setUserWin}
+      updateCurrentScore={setCurrentScore}
       />
     </div>
   )

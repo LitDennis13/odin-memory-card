@@ -12,7 +12,7 @@ const URL = `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&limit
     console.error(error);
   });
 */
-let imageDataFromScript = [
+let cardDataFromScript = [
     {
         name: "Williams",
         clicked: false,
@@ -65,4 +65,4 @@ let imageDataFromScript = [
     },
 ];
 
-export default imageDataFromScript;
+export default cardDataFromScript;

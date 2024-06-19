@@ -1,7 +1,8 @@
-import imageDataFromScript from "../../scripts/ImageData";
+import cardDataFromScript from "../../scripts/CardData";
+
 import "./GameComponent-styles.css"
 
-let imageData = imageDataFromScript;
+let cardData = cardDataFromScript;
 
 function shuffle(array) {
     let currentIndex = array.length;
@@ -15,16 +16,52 @@ function shuffle(array) {
     return array;
 }
 
-function GameComponent({currentScore, updateCurrentScore, topScore, updateTopScore}) {
-    imageData = shuffle(imageData);
+function GameComponent({play, setPlay, setWin, currentScore, updateCurrentScore, topScore, updateTopScore}) {
+    cardData = shuffle(cardData);
+
+    function checkForWin() {
+        for (const card of cardData) {
+            if (!card.clicked) {
+                return;
+            }
+        }
+        updateTopScore(10);
+        setPlay(false);
+        setWin(true);
+        for (const card of cardData) {
+            card.clicked = false;
+        }
+    }
+
+    function onClickHandler(event) {
+        if (play) {
+            const target = event.target.parentNode;
+            const card = cardData[target.classList[0].substring(0,1)];
+            
+            if (target.classList.contains("clicked")) {
+                if (currentScore > topScore) {
+                    updateTopScore(currentScore);
+                }
+                for (const card of cardData) {
+                    card.clicked = false;
+                }
+                setPlay(false);
+            }
+            else {
+                card.clicked = true;
+                updateCurrentScore(currentScore + 1);
+                checkForWin();
+            }
+        }
+    }
 
     return <div id="card-display">
-        {imageData.map((data, index) => {
+        {cardData.map((data, index) => {
             let classData = [index];
-            if (!data.clicked) {
+            if (data.clicked) {
                 classData.push("clicked");
             }
-            return <button  key={index} id="card-button" className={classData.join(", ")}>
+            return <button key={index} id="card-button" className={classData.join(", ")} onClick={onClickHandler}>
                 <img id="card-image" src={data.imageURL}></img>
             </button>;
         })}

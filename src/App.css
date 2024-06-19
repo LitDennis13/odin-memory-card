@@ -17,10 +17,11 @@
 
 #explanation-div {
     margin-top: .3vh;
+    align-self: center;
 }
 
 #explanation {
-    font-size: 2vw
+    font-size: 2.1vw;
 }
 
 #score-numbers {
