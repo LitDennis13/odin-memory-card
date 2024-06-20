@@ -9,7 +9,6 @@ function GameEndComponent({play, setPlay, win, setWin, updateCurrentScore}) {
     }
 
     if (!play) {
-        console.log("Not Playing");
         if (win) displayMessage = "You Win!!!";
         else displayMessage = "You Lose";
     }

@@ -1,67 +1,64 @@
-const GIPHY_API_KEY = "os19KtoX0pnEG2TaOjCsWjbtCDancfSL";
-const URL = `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&limit=1&q=cats`;
+import williamsLogo from "../assets/images/Williams Transparent Logo.png";
+import mclarenLogo from "../assets/images/Mclaren Transparent Logo.png";
+import mercedesLogo from "../assets/images/Mercedes Transparent Logo.png";
+import astonmartinLogo from "../assets/images/Aston Martin Transparent Logo.png";
+import redbullLogo from "../assets/images/Redbull Transparent Logo.png";
+import vcarbLogo from "../assets/images/Visa Cash App RB Transparent Logo.png";
+import haasLogo from "../assets/images/Haas Transparent Logo.png";
+import alpineLogo from "../assets/images/Alpine Transparent Logo.png";
+import sauberLogo from "../assets/images/Sauber Transparent Logo.png";
+import ferrariLogo from "../assets/images/Ferrari Transparent Logo.png";
 
-/*fetch(URL)
-  .then((response) => {
-    return response.json();
-  })
-  .then((content) => {
-    console.log(content);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-*/
 let cardDataFromScript = [
     {
         name: "Williams",
         clicked: false,
-        imageURL: "https://img.freepik.com/free-photo/artistic-blurry-colorful-wallpaper-background_58702-8259.jpg"
+        imageURL: williamsLogo
     },
     {
         name: "Mclaren",
         clicked: false,
-        imageURL: "https://whitescreen.online/image/orange-background.png"
+        imageURL: mclarenLogo
     },
     {
         name: "Mercedes",
         clicked: false,
-        imageURL: "https://media.istockphoto.com/id/1484130495/vector/shiny-metal-texture-silver-or-stainless-steel-background.jpg?s=612x612&w=0&k=20&c=l-At27ry22KvWByVTGGgIEn5xMWTmVktrnxbTWaO_bQ="
+        imageURL: mercedesLogo
     },
     {
         name: "Aston Marin",
         clicked: false,
-        imageURL: "https://i.ytimg.com/vi/lsawjstoaEc/maxresdefault.jpg"
+        imageURL: astonmartinLogo
     },
     {
         name: "Redbull",
         clicked: false,
-        imageURL: "https://filestore.community.support.microsoft.com/api/images/3d1d0fa9-84a3-4daf-8ea5-0f6e4226acbd?upload=true"
+        imageURL: redbullLogo
     },
     {
         name: "Visa Cash App RB",
         clicked: false,
-        imageURL: "https://www.whitescreen.org/static/whitescreen/img/blue-screen.webp"
+        imageURL: vcarbLogo
     },
     {
         name: "Haas",
         clicked: false,
-        imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7cXJY4Rfff2smDrMOlqf0ETNJD9WAWFodvw&s"
+        imageURL: haasLogo
     },
     {
         name: "Alpine",
         clicked: false,
-        imageURL: "https://i.ytimg.com/vi/Fok6KYb5irg/maxresdefault.jpg"
+        imageURL: alpineLogo
     },
     {
         name: "Sauber",
         clicked: false,
-        imageURL: "https://play-lh.googleusercontent.com/3f0A7wku8KOEaOAT9fZOKrw3wKZyCmbAJM1ulQU3Lj41tXIhWngaHgDZK59a2htSu4k=w240-h480-rw"
+        imageURL: sauberLogo
     },
     {
         name: "Ferrari",
         clicked: false,
-        imageURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEX/AAAZ4gk3AAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII="
+        imageURL: ferrariLogo
     },
 ];
 
